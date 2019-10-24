@@ -1,0 +1,95 @@
+body{
+    font-family: Roboto;
+}
+.jumbotron {
+    color: #2c3e50;
+    text-align: center;
+}
+.jumbotron section >h1 {
+    font-family: Jomolhari;
+    font-weight: bold;
+    font-size: 3em;
+}
+#commentSection {
+    background-color: #EDEDEF;
+    margin-bottom: 20px;
+}
+
+.delete-form {
+    display: inline-block;
+}
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+.form-box{
+    width:80%;
+    margin:45px auto;
+}
+
+ label {
+    font-weight: bold;
+}
+#footer{
+  position: fixed;
+  bottom: 0;
+  margin-top: 50px!important;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #f5f5f5;
+}
+.container .text-muted {
+    margin: 20px 0;
+  }
+.campgrounds-box{
+    margin-bottom: 7rem!important;
+    display:flex;
+    flex-wrap:wrap;
+}
+#user-image-profile{
+    
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    /* Prevent background color leak outs */
+  -webkit-background-clip: padding-box; 
+  -moz-background-clip:    padding; 
+  background-clip:         padding-box;
+}
+.card-addons{
+    width: 14rem;
+}
+@media (max-width:575px){
+    .search-btn{
+        margin: 6px 30%!important;
+    }
+    .campgrounds-box{
+        margin-left: 8%!important;
+    }
+    .user-profile-m{
+        margin-left: 1rem !important;
+    }
+}
+@media (min-width:558px){
+    .card-addons-user-profile{
+        width:10em;
+    }
+}
+
+
+@media (min-width: 743px) {.form-box{
+    width: 40%;
+} }
+@media (min-width: 752px) {.card-addons{
+    width: 9rem;
+} }
+
+@media (min-width: 993px) { .card-addons{
+    width: 11rem;
+} }
+@media (min-width: 1200px) { .card-addons{
+    width: 14rem;
+} }

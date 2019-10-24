@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+<div class="my-4 container">
+    <div class="row">
+        <div class="card col-md-4  col-sm-4 mb-2 user-profile-m" style="width: 16em;">
+            <h1 class="mt-2"><%= user.firstName +" "+ user.lastName %></h1>
+            <hr>
+            <img id="user-image-profile" class="card-img-top" src="<%=user.avatar%>" alt="user profile image">
+            <div class="caption my-3"><a href="mailto:<%=user.email%>"><%=user.email%></a></div>
+            <p>
+                <%if(user.description &&user.description){%>
+                    <%=user.description%>
+                <%}else{%>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae fugit voluptates ipsam sunt, 
+                    facere modi nihil adipisci distinctio quasi laboriosam sit perspiciatis aliquam cupiditate expedita harum porro, dignissimos sequi obcaecati?
+                    <%} %>
+               </p>
+        </div>
+        <div class="col-md-8 col-sm-8 row ">
+                <% campgrounds.forEach(function(camp){ %>
+                    <div class="col-md-4 col-sm-6  mt-1 mb-3 user-profile-m ">
+                        <div class="card card-addons card-addons-user-profile" >
+                            <img src="<%= camp.image %>" class="card-img-top" alt="Campground Image of <%=camp.name%>" height="200">
+                            <div class="card-body">
+                                <h5 class="card-title"><%=  camp.name %></h5>
+                                <p class="card-text"> 
+                                    <a href="/campgrounds/<%= camp._id %>" class="btn btn-primary">More Info</a>
+                                </p>
+                            </div><!-- End card body -->
+                        </div><!-- End card -->
+                    </div><!-- End box col-md-4 -->
+                    <% }); %>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

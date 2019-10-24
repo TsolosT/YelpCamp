@@ -1,0 +1,44 @@
+<% include ../partials/header %>
+<div class="mt-4 container">
+    <header class="jumbotron ">
+        <section class="container text-center">
+            <h1><i class="fab fa-gripfire"></i>Welcome To YelpCamp</h1>
+            <p>Explore all hang-picked campgrounds from all over the world.</p>
+            <p>
+                <a class="btn btn-outline-info btn-md" href="/campgrounds/new">Add New Campground</a>
+            </p>
+        </section>
+    </header>
+    <section class="search-box">
+            <form action="/campgrounds" method="GET" class="form-inline" id="campground-search">
+                <div class=" form-group mx-auto">
+                    <input type="text" name="search" placeholder="Campground search..." class="form-control ">
+                    <button   class="btn btn-md btn-info ml-1 p-1 search-btn">Search <i class="fas fa-search"></i></button>
+                </div>
+            </form>
+    </section>
+    <hr>
+    <section class="row text-center campgrounds-box" >
+        <div class="col-md-12">
+                <% if(noMatch !== null) { %>
+                <h3><%= noMatch %></h3>
+                <% } %>
+        </div>
+        <% campgrounds.forEach(function(camp){ %>
+        <div class="col-md-3 col-sm-6 mt-5">
+            <div class="card card-addons">
+                <img src="<%= camp.image %>" class="card-img-top" alt="<%= camp.name %>" height="200">
+                <div class="card-body">
+                    <h5 class="card-title"><%=  camp.name %></h5>
+                <p class="card-text"> 
+                    <a href="/campgrounds/<%= camp._id %>" class="btn btn-info">More Info</a>
+                </p>
+                </div><!-- End card body -->
+            </div><!-- End card -->
+        </div><!-- End box col-md-3 -->
+        <% }); %>
+    </section>
+</div>
+
+
+<% include ../partials/footer %>
