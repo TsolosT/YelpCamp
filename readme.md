@@ -11,7 +11,10 @@ Login password: guest123 <br>
 
 ## Installation & Dependencies :
 * Clone project
-* Just install if you done have <a href="https://nodejs.org/en/">node.js</a> -> $ npm install package1 package2 ...etc --save
+* Just install if you done have <a href="https://nodejs.org/en/">node.js</a> ->
+```
+npm install --save 
+```
 * Check packages from package.json ->section: "dependencies" {}
 
 # Features
