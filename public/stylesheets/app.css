@@ -64,7 +64,8 @@ body{
 }
 @media (max-width:575px){
     .search-btn{
-        margin: 6px 30%!important;
+        margin: 6px 0px!important;
+         width: 100%;
     }
     .campgrounds-box{
         margin-left: 8%!important;
